@@ -1,0 +1,256 @@
+<!-- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Prawn Disease Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        .disease-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .disease-card {
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #007bff; /* Blue border */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            background-color: whitesmoke;
+            text-align: center; /* Center align text */
+        }
+
+        .disease-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05); /* Increase size on hover */
+        }
+
+        .disease-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff; /* Blue color */
+        }
+
+        .disease-description {
+            font-size: 16px;
+        }
+
+        .disease-image {
+            width: 80px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="logo">PRAWN DISEASE DETECTION</a>
+    <div class="header-right">
+        <a href="/">Home</a>
+        <a href="/ml">ML Prediction</a>
+        <a href="/dl">DL Prediction</a>
+        <a class="active" href="/diseases">Diseases</a>
+        <a href="/treatments">Treatments</a>
+    </div>
+</div>
+
+<div id="main-container">
+    <div class="disease-container">
+        <div class="disease-card">
+            <img class="disease-image" src="..\static\images\vibriosis.jfif" alt="Vibriosis Image">
+            <h2 class="disease-title">VIBRIOSIS</h2>
+            <p class="disease-description">Vibriosis in shrimps is a common bacterial disease caused by gram-negative, oxidase-positive, motile rod bacteria.
+                Affected shrimp larvae exhibit necrosis of appendages, expanded chromatophores, empty gut, and poor feeding, with cumulative mortalities reaching up to 80% within a few days.
+                Microscopic demonstration confirms the disease in shrimp larvae, and preventive measures involve maintaining water quality and reducing organic load through increased water exchange.</p>
+        </div>
+
+        <div class="disease-container">
+    <div class="disease-card">
+        <img class="disease-image" src="..\static\images\Black Gill.png" alt="Black Gill Disease Image">
+        <h2 class="disease-title">BLACK GILL DISEASE</h2>
+        <p class="disease-description">Shrimps with black gill disease display visible brown to black spots on the gills, and in severe cases, complete gill discoloration with atrophy and necrosis is apparent.
+            Black gill disease can result from various factors, including excessive levels of toxic substances like nitrite, ammonia, and pollutants in the water.
+            Prevention involves addressing specific causes; for pollution-related cases, improving pond water quality is essential.
+        </p>
+    </div>
+
+    <div class="disease-card">
+        <img class="disease-image" src="..\static\images\whiteGut.jpg" alt="White Gut Disease Image">
+        <h2 class="disease-title">WHITE GUT</h2>
+        <p class="disease-description">White gut disease in shrimps is characterized by a white or translucent appearance in the digestive tract, particularly the gut, commonly referred to as "White Gut."
+            It leads to a loss of appetite, lethargy, and high mortality rates in affected shrimp populations. 
+            Essential preventive measures include ensuring proper nutrition, effective water quality management, and the implementation of disease prevention strategies to address and mitigate the risks associated with white gut disease in shrimp.
+        </p>
+    </div>
+
+    <div class="disease-card">
+        <img class="disease-image" src="..\static\images\White Spot.png" alt="White Spot Syndrome Image">
+        <h2 class="disease-title">WHITE SPOT SYNDROME (WSS)</h2>
+        <p class="disease-description">White Spot is a highly contagious viral infection in shrimp, leading to significant mortality in cultured populations.
+            It is characterized by the appearance of white spots on the exoskeleton and affects multiple organs, leading to high mortality rates. 
+            Effective prevention strategies involve implementing strict biosecurity measures, regular health monitoring, and measures to prevent the introduction and spread of WSSV in shrimp farms.
+            WSD is primarily caused by the highly contagious and lethal White Spot Syndrome Virus, contributing to elevated mortality rates in shrimp.
+        </p>
+    </div>
+</div>
+
+    </div>
+</div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Shrimp Disease Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        .disease-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .disease-card {
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #007bff; /* Blue border */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            background-color: whitesmoke;
+            text-align: center; /* Center align text */
+        }
+
+        .disease-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05); /* Increase size on hover */
+        }
+
+        .disease-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff; /* Blue color */
+        }
+
+        .disease-description {
+            font-size: 16px;
+        }
+
+        .disease-image {
+            width: 100%; /* Adjust width to fill the container */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="logo">SHRIMP DISEASE DETECTION</a>
+    <div class="header-right">
+        <a href="/">Home</a>
+        <a href="/ml">ML Prediction</a>
+        <a href="/dl">DL Prediction</a>
+        <a class="active" href="/diseases">Diseases</a>
+        <a href="/treatments">Treatments</a>
+    </div>
+</div>
+
+<div id="main-container">
+    <div class="disease-container">
+        <div class="disease-card">
+            <img class="disease-image" src="..\static\images\vibriosis.jfif" alt="Vibriosis Image">
+            <h2 class="disease-title">VIBRIOSIS</h2>
+            <p class="disease-description">Vibriosis in shrimps is a common bacterial disease caused by gram-negative, oxidase-positive, motile rod bacteria.
+                Affected shrimp larvae exhibit necrosis of appendages, expanded chromatophores, empty gut, and poor feeding, with cumulative mortalities reaching up to 80% within a few days.
+                Microscopic demonstration confirms the disease in shrimp larvae, and preventive measures involve maintaining water quality and reducing organic load through increased water exchange.</p>
+        </div>
+
+        <div class="disease-container">
+            <div class="disease-card">
+                <img class="disease-image" src="..\static\images\Black Gill.png" alt="Black Gill Disease Image">
+                <h2 class="disease-title">BLACK GILL DISEASE</h2>
+                <p class="disease-description">Shrimps with black gill disease display visible brown to black spots on the gills, and in severe cases, complete gill discoloration with atrophy and necrosis is apparent.
+                    Black gill disease can result from various factors, including excessive levels of toxic substances like nitrite, ammonia, and pollutants in the water.
+                    Prevention involves addressing specific causes; for pollution-related cases, improving pond water quality is essential.
+                </p>
+            </div>
+        
+            <div class="disease-card">
+                <img class="disease-image" src="..\static\images\whiteGut2.jfif" alt="White Gut Disease Image" style="width: 100%; height: 62%;">
+                <h2 class="disease-title">WHITE GUT</h2>
+                <p class="disease-description">White gut disease in shrimps is characterized by a white or translucent appearance in the digestive tract, particularly the gut, commonly referred to as "White Gut."
+                    It leads to a loss of appetite, lethargy, and high mortality rates in affected shrimp populations. 
+                    Essential preventive measures include ensuring proper nutrition, effective water quality management, and the implementation of disease prevention strategies to address and mitigate the risks associated with white gut disease in shrimp.
+                </p>
+            </div>
+        
+            <div class="disease-card">
+                <img class="disease-image" src="..\static\images\White Spot.png" alt="White Spot Syndrome Image">
+                <h2 class="disease-title">WHITE SPOT SYNDROME (WSS)</h2>
+                <p class="disease-description">White Spot is a highly contagious viral infection in shrimp, leading to significant mortality in cultured populations.
+                    It is characterized by the appearance of white spots on the exoskeleton and affects multiple organs, leading to high mortality rates. 
+                    Effective prevention strategies involve implementing strict biosecurity measures, regular health monitoring, and measures to prevent the introduction and spread of WSSV in shrimp farms.
+                    WSD is primarily caused by the highly contagious and lethal White Spot Syndrome Virus, contributing to elevated mortality rates in shrimp.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

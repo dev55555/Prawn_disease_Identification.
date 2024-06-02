@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <style>
+        #result-card {
+            border: 2px solid #3498db; /* Change border properties */
+            border-radius: 8px;
+            padding: 50px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+            background-color: #fff; /* Set a white background color */
+            color: #333; /* Adjust text color to ensure readability */
+        }
+
+        /* Make predicted disease bold and blue */
+        #predict {
+            font-weight: bold; /* Make it bold */
+            color: #3498db; /* Make it blue */
+        }
+
+        /* Existing styles... */
+        #upload-button {
+            margin-bottom: 20px;
+        }
+        #upload-button,
+        button {
+            background-color: #4CAF50;
+            color:white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #upload-button:hover,
+        button:hover {
+            background-color: #45a049;
+        }
+        #uploaded-image-card {
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px; /* Added margin to make space for the button */
+        }
+        #predict-disease-button {
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            transform: translateX(-50%);
+            z-index: 1; /* Added to ensure the button is on top of the image */
+        }
+        .header .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #main-container {
+            display: flex;
+        }
+        #left-side {
+            flex: 1;
+        }
+        #right-side {
+            flex: 2;
+            text-align: center;
+        }
+        #right-side > div {
+            margin-bottom: 20px;
+        }
+
+        /* Additional styles for Prediction and Remediation sections */
+        #prediction-section,
+        #remediation-section {
+            background-color: #f9f9f9; /* Light gray background */
+            padding: 10px; /* Add padding for spacing */
+            border-radius: 8px; /* Rounded corners */
+            margin-top: 10px; /* Add margin to separate from other content */
+            border: 1px solid #ddd; /* Add border for clarity */
+        }
+
+        /* Title styling */
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px; /* Add some space below the title */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="#" class="logo">SHRIMP DISEASE DETECTION</a>
+    <div class="header-right">
+        <a href="/">Home</a>
+        <a href="/ml">ML Prediction</a>
+        <a class="active" href="/dl">DL Prediction</a>
+        <a href="/diseases">Diseases</a>
+        <a href="/treatments">Treatments</a>
+    </div>
+</div>
+
+<div id="main-container">
+    <div id="left-side">
+        <input type="file" id="upload-button" onchange="displayImage()">
+        <div id="uploaded-image-card"></div>
+        <button onclick="predictDisease()" id="predict-disease-button">Predict Disease</button>
+    </div>
+
+    <div id="right-side">
+        <!-- Prediction section -->
+        <div id="prediction-section">
+            <div class="section-title">Prediction</div>
+            <div id="result-card">
+                <p id="predict"></p>
+            </div>
+        </div>
+
+        <!-- Remediation section -->
+        <div id="remediation-section">
+            <div class="section-title">Remediation</div>
+            <div id="result-card"> 
+                <p id="treatment"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function displayImage() {
+        var uploadButton = document.getElementById('upload-button');
+        var uploadedImageCard = document.getElementById('uploaded-image-card');
+
+        var uploadedImage = document.createElement('img');
+        uploadedImage.src = URL.createObjectURL(uploadButton.files[0]);
+        uploadedImage.style.width = '100%';
+
+        uploadedImageCard.innerHTML = '';
+        uploadedImageCard.appendChild(uploadedImage);
+        uploadedImageCard.style.display = 'block';
+    }
+
+    function predictDisease() {
+        var uploadButton = document.getElementById('upload-button');
+        var formData = new FormData();
+        formData.append('image', uploadButton.files[0]);
+
+        fetch('/predict', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            document.getElementById('predict').innerHTML = data.disease;
+            document.getElementById('treatment').innerHTML = data.treatment;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+</body>
+</html>

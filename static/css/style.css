@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/prawn_image(2).jpeg');
+    /* Optionally, you can specify other properties like background size, repeat, position, etc. */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    
+}
+
+.header title{
+
+font-size: 25px;
+font-weight: bold;
+
+}
+
+.header {
+overflow: hidden;
+background-color: #0c679e;
+
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+.header a {
+float: left;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px; 
+line-height: 25px;
+border-radius: 4px;
+}
+
+.header a.logo {
+font-size: 25px;
+font-weight: bold;
+}
+
+.header a:hover {
+
+color: black;
+}
+
+.header a.active {
+
+color: white;
+}
+
+.header-right {
+float: right;
+
+}
+
+@media screen and (max-width: 500px) {
+.header a {
+float: none;
+display: block;
+text-align: left;
+}
+
+.header-right {
+float: none;
+background-color: #ddd;
+}
+}
+
+
+/* Styles for smaller screens (mobile) */
+@media screen and (max-width: 600px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+        background-color: #ddd;
+
+    }
+
+    #main-container {
+        flex-direction: column;
+    }
+
+    #left-side,
+    #right-side {
+        width: 100%;
+    }
+}
+
+#main-container {
+    display: flex;
+    padding: 20px;
+}
+
+#left-side {
+    flex: 1;
+    padding: 20px;
+}
+
+#upload-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#uploaded-image-card {
+    display: none; /* initially hide the card */
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#right-side {
+    flex: 1;
+    padding: 20px;
+}
+
+#result-card {
+    border: 1px solid #ddd;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#button{
+    color: black;
+}
+#title{
+    color:white;
+}

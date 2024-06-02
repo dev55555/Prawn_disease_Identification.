@@ -1,0 +1,211 @@
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Prawn Disease Treatment</title>
+    <style>
+        /* Add custom styles for treatment information */
+        .treatment-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .treatment-card {
+            width: 45%; /* Adjusted width to occupy more space */
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .treatment-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .treatment-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .treatment-description {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="logo">PRAWN DISEASE DETECTION</a>
+    <div class="header-right">
+        <a href="/">Home</a>
+        <a href="/ml">ML Prediction</a>
+        <a href="/dl">DL Prediction</a>
+        <a href="/diseases">Diseases</a>
+        <a class="active" href="/treatments">Treatments</a>
+    </div>
+</div>
+
+<div id="main-container">
+    <div class="treatment-container">
+        <div class="treatment-card">
+            <h2 class="treatment-title">White spot (WSSV)</h2>
+            <p class="treatment-description">
+                The main cause for the white spot disease is the white spot syndrome virus (WSSV). WSSV is the lone virus of the genus Whispovirus which is the only genus in the family Nimaviridae. This virus is lethal and affects only crustaceans. The outbreaks of this virus can wipe out the entire population of shrimp in a farm within a few days. This disease infects prawns, crabs, lobsters from marine, fresh or brackish waters.
+                
+                Occurrence
+                The virus can infect the shrimp at any stage of its lifecycle. From eggs to broodstock the virus can develop rapid mortality. About 80% of mortalities occur within a period of three to ten days. Transmission of the disease occurs vertically from infected broodstock and horizontally through cannibalism of dying and sick prawns. There is a possibility of transmission through contaminated water also. Birds can also be carriers by transmitting the disease from one pond to another..</p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Treatment for Disease 2</h2>
+            <p class="treatment-description">Description of treatment for Disease 2.</p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Treatment for Disease 3</h2>
+            <p class="treatment-description">Description of treatment for Disease 3.</p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Treatment for Disease 4</h2>
+            <p class="treatment-description">Description of treatment for Disease 4.</p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Treatment for Disease 5</h2>
+            <p class="treatment-description">Description of treatment for Disease 5.</p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Treatment for Disease 6</h2>
+            <p class="treatment-description">Description of treatment for Disease 6.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Shrimp Disease Treatment</title>
+    <style>
+        /* Add custom styles for treatment information */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header .logo {
+            color: #ffffff; /* White color */
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        .treatment-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .treatment-card {
+            width: 45%; /* Adjusted width to occupy more space */
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #007bff; /* Blue border */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            background-color: #ffffff; /* White background */
+            text-align: center; /* Center align text */
+        }
+
+        .treatment-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05); /* Increase size on hover */
+        }
+
+        .treatment-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff; /* Blue color */
+        }
+
+        .treatment-description {
+            font-size: 16px;
+            color: #000000; /* Black color */
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="logo">SHRIMP DISEASE DETECTION</a>
+    <div class="header-right">
+        <a href="/">Home</a>
+        <a href="/ml">ML Prediction</a>
+        <a href="/dl">DL Prediction</a>
+        <a href="/diseases">Diseases</a>
+        <a class="active" href="/treatments">Treatments</a>
+    </div>
+</div>
+
+<div id="main-container">
+    <div class="treatment-container">
+        <div class="treatment-card">
+            <h2 class="treatment-title">White spot (WSSV)</h2>
+            <p class="treatment-description">
+                There is currently no specific treatment for white spot disease in prawns. Prevention and management strategies focus on biosecurity measures to reduce the risk of disease transmission. These include quarantine, strict biosecurity protocols, proper farm management practices, genetic selection for resistance, and regular monitoring and surveillance for early detection. Collaboration with aquatic animal health professionals and regulatory authorities is crucial for developing effective disease management strategies tailored to individual farm conditions.
+
+</p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Black Gill</h2>
+            <p class="treatment-description">Treatment options for black gill disease in prawns are limited. Management strategies include maintaining optimal water quality, implementing strict biosecurity measures, using antimicrobial treatments cautiously, considering genetic selection for resistance, and modifying environmental conditions to reduce parasite prevalence. Collaboration with aquatic animal health professionals is crucial for effective disease management.
+
+            </p>
+        </div>
+
+        <div class="treatment-card">
+            <h2 class="treatment-title">Vibrosis
+            </h2>
+            <p class="treatment-description">Antibiotics are the most common treatment for vibriosis in crustaceans, including prawns, and are used both as prophylaxis and therapeutics. However, improper use of antibiotics can lead to antibiotic resistance and multidrug-resistant (MDR) bacteria. Other methods to reduce the impacts of vibriosis include:Vaccination
+                Water quality control,Bacteriophages or phage therapy, Biosecurity protocols,Herbal immunomodulators,Herbs as antibiotics,Probiotics </p>
+        </div>
+
+        <!-- <div class="treatment-card">
+            <h2 class="treatment-title">Treatment for Disease 4</h2>
+            <p class="treatment-description">Description of treatment for Disease 4.</p>
+        </div> -->
+    </div>
+</div>
+
+</body>
+</html>
+

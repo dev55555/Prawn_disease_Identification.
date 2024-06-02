@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        #main-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px; /* Increased border radius for a smoother look */
+            border: 2px solid #007bff; /* Changed border color and width */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #introduction {
+            text-align: center; /* Center align text */
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #introduction:hover {
+            transform: scale(1.1); /* Increase size on hover */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        #introduction h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+            font-size: 36px; /* Increase font size */
+            text-transform: uppercase; /* Convert text to uppercase */
+            letter-spacing: 2px; /* Increase letter spacing */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
+        }
+
+        #introduction p {
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+    <title>Shrimp Disease Detection</title>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="logo">SHRIMP DISEASE DETECTION</a>
+    <div class="header-right">
+        <a class="active" href="/">Home</a>
+        <a href="/ml">ML Prediction</a>
+        <a href="/dl">DL Prediction</a>
+        <a href="/diseases">Diseases</a>
+        <a href="/treatments">Treatments</a>
+    </div>
+</div>
+
+<div id="main-container">
+    <div id="introduction">
+        <h2>Welcome to Shrimp Disease Detection</h2>
+        <p>This project aims to utilize machine learning and deep learning techniques to predict and diagnose diseases in shrimps. Shrimps are susceptible to various diseases that can significantly impact aquaculture production. Early detection and appropriate treatment are crucial for maintaining the health of shrimp populations and ensuring sustainable aquaculture practices.</p>
+        <p>Our platform provides a user-friendly interface for uploading shrimp images and obtaining predictions regarding potential diseases. By leveraging advanced algorithms and image processing techniques, we strive to enhance disease detection accuracy and facilitate prompt intervention measures.</p>
+    </div>
+</div>
+
+</body>
+</html>
+
